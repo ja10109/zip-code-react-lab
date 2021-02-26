@@ -7,11 +7,29 @@ function City(props) {
 }
 
 function ZipSearchField(props) {
-  return (<div>This is the ZipSearchField component</div>);
+  return (
+    <div>
+      <label>Zip Code: </label>
+      <input type="text" onChange=(onChange) />
+    </div>);
 }
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      zipCode: ' '.
+      cities: [],
+    }
+  }
+    
+  zipChanged(e) {
+    this.setState({
+      zipCode: e.target.value
+    })
+  }
+          
   render() {
     return (
       <div className="App">
