@@ -25,6 +25,12 @@ class App extends Component {
   }
     
   zipChanged(e) {
+    fetch('https://ctp-zip-api.herokuapp.com/zip/')
+      .then()
+      .then()
+      .catch()
+    
+    
     this.setState({
       zipCode: e.target.value
     })
@@ -36,8 +42,10 @@ class App extends Component {
         <div className="App-header">
           <h2>Zip Code Search</h2>
         </div>
-        <ZipSearchField />
+        <ZipSearchField onChange={(e) => this.zipChange(e)} />
         <div>
+          <City />
+          <City />
           <City />
           <City />
         </div>
